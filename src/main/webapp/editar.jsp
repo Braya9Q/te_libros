@@ -11,13 +11,13 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Nuevo libro</h1>
+        <h1><%= (lib.getId() == 0) ? "Nuevo libro" : "Editar libro"%></h1>
         <form action="MainController" method="post">
             <input type="hidden" name="id" value="${lib.id}">
             <table>
                 <tr>
                     <td>ISBN</td>
-                    <td><input type="text" name="isbn" value="${lib.isbn}"></td>
+                    <td><input type="text" name="isbn" value="<%= lib.getIsbn()%>"></td>
                 </tr>
                 <tr>
                     <td>Titulo</td>

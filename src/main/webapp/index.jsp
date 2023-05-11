@@ -21,6 +21,7 @@
                 <th>Titulo</th>
                 <th>Categoria</th>
                 <th></th>
+                <th></th>
             </tr>
             <c:forEach var="item" items="${lista}">
             <tr>
@@ -30,6 +31,9 @@
                 <td>${item.categoria}</td>      
                 <td>
                     <a href="MainController?op=eliminar&id=${item.id}" onclick="return(confirm('Esta seguro?'))">Eliminar</a>
+                </td>
+                <td>
+                    <a href="MainController?op=editar&id=${item.id}">Editar</a>
                 </td>
             </c:forEach>
             </tr>
